@@ -1,0 +1,27 @@
+apps: 
+    - script: ./app.js      # 入口文件
+        name: "app"         # 程序名称
+        env:                # 环境变量
+            COMMON_VARIABLE: true
+        env_production:
+            NODE_ENV: production
+
+deploy:                     #部署脚本
+    production: 
+        user: root
+        host: 47.102.143.46
+        port: 22
+        ref: origin/master
+        ssh_options: StrictHostKeyChecking=no
+        repo: https://github.com/jawnwa22/koa-pm2-ci.git
+        path: /opt/koa-pm2-ci       # 拉取到服务器对应的目录下
+        post-deploy: mkdir test                # 部署后执行
+        env:
+            NODE_ENV: production
+
+# 初始化
+# pm2 deploy <configuration_file> production setup 
+
+# 部署
+# pm2 deploy <configuratio_file> production 
+
