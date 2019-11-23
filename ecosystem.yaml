@@ -5,6 +5,9 @@ apps:
             COMMON_VARIABLE: true
         env_production:
             NODE_ENV: production
+# Here the default environment is in the env, 
+# but you can decide to use env_production by using 
+# pm2 start ecosystem.config.js --env production.
 
 deploy:                     #部署脚本
     production: 
