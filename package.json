@@ -1,0 +1,13 @@
+{
+  "name": "koa-pm2-ci",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "koa": "^2.11.0",
+    "koa-logger": "^3.2.1"
+  }
+}
