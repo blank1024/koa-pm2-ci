@@ -20,4 +20,4 @@ CMD ["pm2-runtime", "ecosystem.yaml"]
 # docker build -t myapp .
 
 # 运行代码
-# docker -d -p 5000:5000 --rm --name myapp
+# docker run -d -p 5000:5000 --rm --name myapp
