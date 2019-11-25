@@ -18,9 +18,10 @@ deploy:                     #部署脚本
         ssh_options: StrictHostKeyChecking=no
         repo: https://github.com/jawnwa22/koa-pm2-ci.git
         path: /opt/koa-pm2-ci       # 拉取到服务器对应的目录下
-        post-deploy: |              # 部署后执行
-            docker build -t myapp .
-            docker -d -p 5000:5000 --rm --name myapp
+        # post-deploy: |              # 部署后执行
+        #     docker build -t myapp .
+        #     docker -d -p 5000:5000 --rm --name myapp
+        post-deploy: docker build -t myapp .
         env:
             NODE_ENV: production
 
