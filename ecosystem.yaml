@@ -21,10 +21,10 @@ deploy:                     #部署脚本
         # post-deploy: |              # 部署后执行
         #     docker build -t myapp .
         #     docker run -d -p 5000:5000 --rm --name myapp
-        post-deploy: |-
-            docker build -t my app.
-            && docker run -d -p 5000:5000 --rm --name myapp
-        # post-deploy: docker build -t myapp . && docker run -d -p 5000:5000 --rm --name myapp
+        # post-deploy: |-
+        #     docker build -t my app.
+        #     && docker run -d -p 5000:5000 --rm --name myapp
+        post-deploy: docker build -t myapp . && docker run -d -p 5000:5000 --rm --name myapp
         env:
             NODE_ENV: production
 
