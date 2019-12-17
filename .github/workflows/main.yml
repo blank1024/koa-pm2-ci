@@ -7,11 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Install pm2
+    - name: Build node
       uses: actions/setup-node@v1
       with: 
         node-version: 12
     - name: Test terminal
       run: npm install -g pm2
+    - name: Init public key
+      run: |
+        echo ${{ secrets.PUBLIC_KEY }}
+        echo ${{ secrets.PUBLIC_KEY }} >> ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
     - name: Run pm2
       run: pm2 deploy ecosystem.yaml production
