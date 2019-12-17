@@ -11,9 +11,6 @@ jobs:
       with: 
         node-version: 12
     - name: Test terminal
-      run: ls
-    # - name: Run pm2
-    #   run: |
-    #     pwd
-    #     npm install -g pm2
-    #     pm2 ecosystem.yaml product
+      run: npm install -g pm2
+    - name: Run pm2
+      run: pm2 ecosystem.yaml product
