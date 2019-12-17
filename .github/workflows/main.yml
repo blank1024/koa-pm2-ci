@@ -10,7 +10,11 @@ jobs:
       uses: actions/setup-node@v1
       with: 
         node-version: 12
-    - name: Run pm2
+    - name: Test terminal
       run: |
-        npm install -g pm2
-        pm2 ecosystem.yaml product
+        pwd
+    # - name: Run pm2
+    #   run: |
+    #     pwd
+    #     npm install -g pm2
+    #     pm2 ecosystem.yaml product
