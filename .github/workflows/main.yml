@@ -11,9 +11,7 @@ jobs:
       with: 
         node-version: 12
     - name: Test terminal
-      run: |
-        pwd
-        ls 
+      run: ls
     # - name: Run pm2
     #   run: |
     #     pwd
