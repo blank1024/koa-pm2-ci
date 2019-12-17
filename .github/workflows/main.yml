@@ -14,7 +14,4 @@ jobs:
     - name: Test terminal
       run: npm install -g pm2
     - name: Run pm2
-      run: |
-        cat ecosystem.yaml
-        cat main.yml
-    #   run: pm2 deploy ecosystem.yaml production
+      run: pm2 deploy ecosystem.yaml production
