@@ -11,6 +11,7 @@ apps:
 
 deploy:                     #部署脚本
     production: 
+        key: ~/.ssh/id_rsa
         user: root
         host: 47.102.143.46
         port: 22
