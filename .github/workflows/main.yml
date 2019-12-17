@@ -13,6 +13,7 @@ jobs:
     - name: Test terminal
       run: |
         pwd
+        ls 
     # - name: Run pm2
     #   run: |
     #     pwd
