@@ -16,8 +16,9 @@ jobs:
     - name: Init public key
       run: |
         mkdir -p ~/.ssh
-        echo ${{ secrets.PUBLIC_KEY }}
         echo ${{ secrets.PUBLIC_KEY }} >> ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
+        cd .ssh
+        ls
     - name: Run pm2
       run: pm2 deploy ecosystem.yaml production
